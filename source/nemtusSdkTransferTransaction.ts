@@ -60,7 +60,7 @@ import {
     console.log(hash.toString());
     console.log(`https://testnet.symbol.fyi/transactions/${hash.toString()}`);
 
-    // トランザクション送信時のペイロード
+    // トランザクション送信時のpayload
     const transactionPayload = (
         facade.transactionFactory.constructor as any
     ).attachSignature(transaction, signature);
