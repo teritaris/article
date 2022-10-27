@@ -41,7 +41,8 @@ import {
         signerPublicKey: publicKeyString,
         deadline,
         recipientAddress: targetAddressString,
-        mosaics: [{ mosaicId: TOKEN_ID, amount: 1000000n }],
+        // mosaics: [{ mosaicId: TOKEN_ID, amount: 1000000n }],
+        mosaics: [{ mosaicId: TOKEN_ID, amount: 100000000000n }],
         message: messageUint8Array
     });
 
@@ -80,6 +81,7 @@ import {
             transactionPayload,
         });
         console.log(response.data);
+        console.log(`${NODE_URL}/transactionStatus/${hash.toString()}`)
     } catch (err) {
         console.error(err);
     }
